@@ -1,8 +1,16 @@
+use rand::Rng;
 use std::io;
 
 fn main() {
     // give the user some information
     println!("welcome to the higher lower game");
+
+    // generate a random number
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    // print the random number
+    println!("the secret number = {}", secret_number);
+
     println!("please input your guess");
 
     // initialize a variable
